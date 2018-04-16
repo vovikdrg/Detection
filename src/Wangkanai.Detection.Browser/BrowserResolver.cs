@@ -24,22 +24,22 @@ namespace Wangkanai.Detection
 
             var ie = new InternetExplorer(agent);
             if (ie.Type == BrowserType.IE)
-                return ie;
+                return new InternetExplorer(agent);
             var firefox = new Firefox(agent);
             if (firefox.Type == BrowserType.Firefox)
-                return firefox;
+                return new Firefox(agent);
             var edge = new Edge(agent);
             if (edge.Type == BrowserType.Edge)
-                return edge;
+                return new Edge(agent);
             var opera = new Opera(agent);
             if (opera.Type == BrowserType.Opera)
-                return opera;
+                return new Opera(agent);
             var safari = new Safari(agent);
             if (safari.Type == BrowserType.Safari)
-                return safari;
+                return new Safari(agent);
             var chrome = new Chrome(agent);
             if (chrome.Type == BrowserType.Chrome)
-                return chrome;
+                return new Chrome(agent);
 
             return new Browser();
         }
